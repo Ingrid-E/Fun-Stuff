@@ -1,0 +1,128 @@
+:root {
+    --resize:10;
+    --center: calc(calc(100px * var(--resize)) / 2.5);
+}
+
+
+#center {
+    display: inline;
+    position: absolute;;
+    background: rgb(246,247,0);
+    background: radial-gradient(circle, rgb(250, 250, 104) 30%, rgb(189, 171, 8) 100%);
+    left: var(--center);
+    top: var(--center);
+    width: calc(25px * var(--resize));
+    height: calc(25px * var(--resize));
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 0.7px;
+    border-color: rgb(212, 167, 18);
+}
+
+.frontPetal, #p8, #p9 {
+    position: absolute;
+    background: radial-gradient(circle, rgba(177,0,93,1) 0%, rgba(255,180,247,1) 100%);
+    border-radius: 40%;
+    width: calc(23px * var(--resize));
+    height: calc(45px * var(--resize));
+    top: calc(calc(97px * var(--resize))/3.3);
+    left: calc(calc(137px * var(--resize))/3.3);
+    border-style: solid;
+    border-width: 0.7px;
+    border-color: rgb(219, 57, 165);
+}
+
+.middlePetal, #p5, #p6 {
+    position: absolute;
+    background: radial-gradient(circle, rgba(177,0,93,1) 0%, rgba(255,180,247,1) 100%);
+    border-radius: 40%;
+    width: calc(23px*var(--resize));
+    height: calc(70px*var(--resize));
+    top: calc(calc(55px * var(--resize))/3.3);
+    left: calc(calc(133px * var(--resize))/3.3);
+    border-style: solid;
+    border-width: 0.7px;
+    border-color: rgb(219, 57, 165);
+}
+
+.backPetal, #p2, #p3 {
+    position: absolute;
+    background: radial-gradient(circle, rgba(177,0,93,1) 0%, rgba(255,180,247,1) 100%);
+    border-radius: 40%;
+    width: calc(25px*var(--resize));
+    height: calc(70px*var(--resize));
+    top: calc(calc(50px * var(--resize))/3.3);
+    left: calc(calc(128px * var(--resize))/3.3);
+    border-style: solid;
+    border-width: 0.7px;
+    border-color: rgb(219, 57, 165);
+    -webkit-transition: -webkit-transform 2s ease-in-out;
+    transition: transform 2s ease-in-out;
+}
+
+.backPetal, #p4, #p7{
+    -webkit-transition: -webkit-transform 2s ease-in-out;
+    transition: transform 3s ease-in-out;
+}
+
+.flower:hover .backPetal{
+    -webkit-transform: rotate(360deg);
+    transform: rotate(30deg);
+}
+
+.flower:hover #p4{
+    -webkit-transform: rotate(360deg);
+    transform: rotate(-60deg);
+}
+
+.flower:hover #p7{
+    -webkit-transform: rotate(360deg);
+    transform: rotate(120deg);
+}
+
+#p2 {
+    top: 0px;
+    left: 0px;
+    transform: rotate(60deg);
+}
+
+#p3 {
+    top: 0px;
+    left: 0px;
+    transform: rotate(120deg);
+}
+
+#p4 {
+    transform: rotate(30deg);
+}
+
+#p5 {
+    top: 0px;
+    left: 0px;
+    transform: rotate(60deg);
+}
+
+#p6 {
+    top: 0px;
+    left: 0px;
+    transform: rotate(120deg);
+}
+
+
+#p7 {
+    transform: rotate(0deg);
+}
+
+#p8 {
+    top: 0px;
+    left: 0px;
+    transform: rotate(60deg);
+}
+
+#p9 {
+    top: 0px;
+    left: 0px;
+    width: calc(20px * var(--resize));
+    height: calc(47px * var(--resize));
+    transform: rotate(125deg);
+}
