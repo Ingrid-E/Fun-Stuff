@@ -1,0 +1,185 @@
+body {
+    background-color: cyan;
+}
+
+:root {
+    --size: 500px;
+    --center: calc(var(--size)/2);
+    --cloudSize: calc(var(--size)/4); 
+}
+
+.CloudySun {
+    background-color: cyan;
+    width: var(--size);
+    height: var(--size);
+}
+
+.Clouds {
+    opacity: 100%;
+    position: relative;
+    top: calc(var(--cloudSize) + 120px);
+    left: calc(var(--cloudSize) + 60px);
+}
+
+#C1, #C2, #C3, #C4, #C5 {
+    position: absolute;
+    border-radius: 100%;
+    width: var(--cloudSize);
+    height: var(--cloudSize); 
+    background: radial-gradient(circle, rgba(255,255,255,1) 60%, rgb(153, 153, 153) 100%);
+}
+
+#C1, #C5 {
+    left: -80px;
+    top: 13px;
+    width: calc(var(--cloudSize) - 50px);
+    height: calc(var(--cloudSize) - 50px);
+    
+}
+
+#C2, #C4 {
+    left: -60px;
+    width: calc(var(--cloudSize) - 20px);
+    height: calc(var(--cloudSize) - 20px);
+}
+
+#C3 {
+    width: calc(var(--cloudSize) + 10px);
+    height: calc(var(--cloudSize) + 10px);
+    left: -15px;
+    top: -15px;
+}
+
+#C4 {
+    left: 60px;
+}
+
+#C5 {
+    left: 110px;
+}
+
+#C6, #C7, #C8, #C9, #C10 {
+    position:absolute;
+    background-color: white;
+    border-radius: 100%;
+}
+
+#C6 {
+    top: -5px;
+    left: -19px;
+    width: calc(var(--cloudSize) + 20px);
+    height: calc(var(--cloudSize) - 10px);
+}
+
+#C7, #C9 {
+    top: 13px;
+    left: -70px;
+    width: calc(var(--cloudSize) - 20px);
+    height: calc(var(--cloudSize) - 50px);
+}
+
+#C9 {
+    left:68px;
+}
+
+#C8, #C10 {
+    top: 28px;
+    left: -75px;
+    width: calc(var(--cloudSize) - 80px);
+    height: calc(var(--cloudSize) - 80px);
+}
+
+#C10 {
+    left: 0px;
+}
+
+.Sun {
+    position: absolute;
+    background: radial-gradient(circle, rgb(255, 238, 143) 0%, rgb(255, 217, 0) 100%); 
+    width: 130px;
+    height: 130px;
+    border-radius: 100%;
+    top: calc(var(--cloudSize) + 115px);
+    left: calc(var(--cloudSize) + 55px);
+}
+
+.CloudySun:hover .Sun {
+    animation-name: raisingSun;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes raisingSun {
+    0% {
+        top: calc(var(--cloudSize) + 115px);
+    }
+    100% {
+        top: calc(var(--cloudSize) + 50px);
+    }
+}
+
+.SunRays  {
+    transform-origin: 1% 0%;
+    opacity: 0%;
+    position: relative;
+    top: calc(var(--cloudSize) + 200px);
+    left: calc(var(--cloudSize) + 109px);
+    transform: rotate(0deg);
+    -webkit-transition: -webkit-transform 2s ease-in-out;
+    transition: transform 2s ease-in-out;
+}
+
+.CloudySun:hover .SunRays{
+    animation-name: rotatingRays;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rotatingRays {
+    0% {
+        opacity: 0%;
+        top: calc(var(--cloudSize) + 200px);
+    }
+    30% {
+        opacity: 0%;
+    }
+    100% {
+        top: calc(var(--cloudSize) + 105px);
+        opacity: 80%;
+        transform: rotate(30deg);
+        -webkit-transform: rotate(-360deg);
+    }
+}
+
+
+#Ray1, #Ray2,  #Ray3, #Ray4, #Ray5, #Ray6{
+    position: absolute;
+    top: -95px;
+    left: -5px;
+    width: 20px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255,212,35,1) 50%, rgb(255, 250, 97) 88%); 
+}
+
+
+
+#Ray2 {
+    transform: rotate(30deg);
+}
+
+#Ray3 {
+    transform: rotate(60deg);
+}
+
+#Ray4 {
+    transform: rotate(90deg);
+}
+
+#Ray5 {
+    transform: rotate(120deg);
+}
+
+#Ray6 {
+    transform: rotate(150deg);
+}
+
